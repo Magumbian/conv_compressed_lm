@@ -1,5 +1,5 @@
 # conv_compressed_lm
-The key idea is to use convolution to reduce the dimensionality of the input emnbeddings before attention and then recover the dimensions with a simple projection to reduce the overall size of the model, there are two flavors here: conv_gpt.py uses a single convolution/causal-attention piepeline whereas residual_gpt uses multiple convolution/causal-attention pipelines which are fused using residual logic. For brevity, only residual_gpt.py is explained in deatil here. Conv_gpt follows teh same pattern but without residual logic
+The key idea is to use convolution to reduce the dimensionality of the input emnbeddings before attention and then recover the dimensions with a simple projection to reduce the overall size of the model, there are two flavors here: conv_gpt.py uses a single convolution/causal-attention piepeline whereas residual_gpt uses multiple convolution/causal-attention pipelines which are fused using residual logic. For brevity, only residual_gpt.py is explained in deatail here. Conv_gpt follows teh same pattern but without residual logic
 
 The key idea is using residual approximation to generate the LLM output. Parameter reduction is 
 obtained by using lower dimensional attention in the residual nodes. 
